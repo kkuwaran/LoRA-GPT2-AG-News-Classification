@@ -18,8 +18,29 @@ We use the AG News dataset available from Hugging Face's datasets library:
   
 The dataset contains 120,000 training and 7,600 test samples classified into four categories.
 
-## Dependencies
-Make sure to install all dependencies before running the notebook. The required packages are listed in `requirements.txt`. You can install them using:
+## Model Training
+The model is trained using the following steps:
+1. Load the GPT-2 tokenizer and model.
+2. Use LoRA to adapt the model for text classification.
+3. Train the model using the AG News dataset.
+4. Evaluate the model on the test set.
 
-```bash
-pip install -r requirements.txt
+The training and evaluation code can be found in `lora_gpt2_training.ipynb`.
+
+## How to Use
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/LoRA-GPT2-AG-News-Classification.git
+   cd LoRA-GPT2-AG-News-Classification
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Open and run the Jupyter notebook `lora_gpt2_training.ipynb` for training and evaluation.
+
+## Model Saving
+The fine-tuned model, including LoRA weights and score weights, are saved in the `lora_gpt2_ag_news/` directory for future use. To load the model, follow the steps provided in the notebook.
+
+## Performance Comparison
+After training, you can compare the performance of the original GPT-2 model and the LoRA fine-tuned model in terms of accuracy and loss on the test set.
