@@ -1,0 +1,7 @@
+tqdm
+pandas
+torch
+datasets
+transformers
+peft
+safetensors
