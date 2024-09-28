@@ -37,17 +37,19 @@ The training and evaluation code can be found in `lora_gpt2_training.ipynb`.
    ```bash
    pip install -r requirements.txt
    ```
-3. Unzip the model files:
-   ```bash
-   7z x lora_gpt2_ag_news/lora_adapter/adapter_model.7z -o lora_gpt2_ag_news/lora_adapter/
-   ```
-5. Open and run the Jupyter notebook `lora_gpt2_training.ipynb` for training and evaluation.
+3. Open and run the Jupyter notebook `lora_gpt2_training.ipynb` for training and evaluation. <br>
+   **Please Note:** If you run the training section, the resulting model will overwrite the existing files in the `lora_gpt2_ag_news/` directory.
 
 ## Model Saving
 The fine-tuned model, including LoRA weights and score weights, are saved in the `lora_gpt2_ag_news/` directory for future use. To load the model, follow the steps provided in the notebook.
 
 ### Note on Model File Compression
 The original model file, `adapter_model.safetensors`, exceeded GitHub's file size limit. To resolve this, the model has been compressed into `adapter_model.7z`. You will need to extract this file before using the model. The compressed file can be found in the `lora_gpt2_ag_news/lora_adapter/` directory.
+
+To unzip the LoRA weight files:
+```bash
+7z x lora_gpt2_ag_news/lora_adapter/adapter_model.7z -o lora_gpt2_ag_news/lora_adapter/
+```
 
 ## Performance Comparison
 After training, you can compare the performance of the original GPT-2 model and the LoRA fine-tuned model in terms of accuracy and loss on the test set.
