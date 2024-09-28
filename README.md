@@ -37,10 +37,11 @@ The training and evaluation code can be found in `lora_gpt2_training.ipynb`.
    ```bash
    pip install -r requirements.txt
    ```
-3. ```bash
+3. Unzip the model files:
+   ```bash
    7z x lora_gpt2_ag_news/lora_adapter/adapter_model.7z -o lora_gpt2_ag_news/lora_adapter/
    ```
-4. Open and run the Jupyter notebook `lora_gpt2_training.ipynb` for training and evaluation.
+5. Open and run the Jupyter notebook `lora_gpt2_training.ipynb` for training and evaluation.
 
 ## Model Saving
 The fine-tuned model, including LoRA weights and score weights, are saved in the `lora_gpt2_ag_news/` directory for future use. To load the model, follow the steps provided in the notebook.
