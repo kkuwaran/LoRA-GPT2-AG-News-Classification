@@ -42,5 +42,8 @@ The training and evaluation code can be found in `lora_gpt2_training.ipynb`.
 ## Model Saving
 The fine-tuned model, including LoRA weights and score weights, are saved in the `lora_gpt2_ag_news/` directory for future use. To load the model, follow the steps provided in the notebook.
 
+### Note on Model File Compression
+The original model file, `adapter_model.safetensors`, exceeded GitHub's file size limit. To resolve this, the model has been compressed into `adapter_model.7z`. You will need to extract this file before using the model. The compressed file can be found in the `lora_gpt2_ag_news/lora_adapter/` directory.
+
 ## Performance Comparison
 After training, you can compare the performance of the original GPT-2 model and the LoRA fine-tuned model in terms of accuracy and loss on the test set.
