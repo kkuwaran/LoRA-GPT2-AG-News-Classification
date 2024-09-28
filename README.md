@@ -30,7 +30,7 @@ The training and evaluation code can be found in `lora_gpt2_training.ipynb`.
 ## How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/LoRA-GPT2-AG-News-Classification.git
+   git clone https://github.com/kkuwaran/LoRA-GPT2-AG-News-Classification.git
    cd LoRA-GPT2-AG-News-Classification
    ```
 2. Install dependencies:
